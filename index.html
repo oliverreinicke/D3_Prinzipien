@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4f46e5">
+  <title>Medikamenten-Check</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="start-screen" class="card screen active">
+      <div class="icon">💊</div>
+      <p class="eyebrow">Selbstkontrolle · ca. 15 Minuten</p>
+      <h1>Medikamenten-Check</h1>
+      <p class="lead">Teste dein Wissen zu sicherer Medikamentenabgabe, Lagerung und 6-R-Regel.</p>
+      <div class="info-grid">
+        <div><strong>12</strong><span>Fragen</span></div>
+        <div><strong>15</strong><span>Minuten</span></div>
+        <div><strong>80 %</strong><span>Ziel</span></div>
+      </div>
+      <label class="name-label">Dein Name oder Kürzel
+        <input id="player-name" maxlength="24" placeholder="freiwillig">
+      </label>
+      <button id="start-btn" class="primary">Spiel starten</button>
+    </section>
+
+    <section id="quiz-screen" class="card screen">
+      <div class="topbar">
+        <span id="question-counter">Frage 1 von 12</span>
+        <span id="score-live">0 Punkte</span>
+      </div>
+      <div class="progress"><div id="progress-bar"></div></div>
+      <p id="question-type" class="eyebrow"></p>
+      <h2 id="question-text"></h2>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+      <button id="check-btn" class="primary" disabled>Antwort prüfen</button>
+      <button id="next-btn" class="primary hidden">Weiter</button>
+    </section>
+
+    <section id="result-screen" class="card screen">
+      <div id="result-icon" class="icon">🏁</div>
+      <p class="eyebrow">Auswertung</p>
+      <h1 id="result-title">Geschafft!</h1>
+      <p id="result-summary" class="lead"></p>
+      <div class="result-ring">
+        <span id="result-percent">0 %</span>
+      </div>
+      <div class="result-details">
+        <div><strong id="result-score">0/12</strong><span>richtig</span></div>
+        <div><strong id="result-time">0:00</strong><span>Zeit</span></div>
+      </div>
+      <p id="result-message" class="result-message"></p>
+      <button id="restart-btn" class="primary">Noch einmal spielen</button>
+      <button id="review-btn" class="secondary">Fehler ansehen</button>
+      <div id="review-area" class="review-area hidden"></div>
+    </section>
+  </main>
+  <footer>Prinzipien der Medikamentenabgabe · Lernspiel</footer>
+  <script src="script.js"></script>
+</body>
+</html>
